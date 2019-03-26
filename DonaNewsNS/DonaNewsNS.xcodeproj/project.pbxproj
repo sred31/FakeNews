@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8147BF7C22412E56008E75B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147BF7B22412E56008E75B8 /* AppDelegate.swift */; };
+		8147BF7E22412E56008E75B8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147BF7D22412E56008E75B8 /* HomeController.swift */; };
+		8147BF8422412E56008E75B8 /* DonaNewsNS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8147BF8222412E56008E75B8 /* DonaNewsNS.xcdatamodeld */; };
+		8147BF8622412E5A008E75B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8147BF8522412E5A008E75B8 /* Assets.xcassets */; };
+		8147BF8922412E5A008E75B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8147BF8722412E5A008E75B8 /* LaunchScreen.storyboard */; };
+		8147BF9122416794008E75B8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147BF9022416794008E75B8 /* Extensions.swift */; };
+		8147BF94224169A3008E75B8 /* DisasterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147BF93224169A3008E75B8 /* DisasterCell.swift */; };
+		8147BF9822419F17008E75B8 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147BF9722419F17008E75B8 /* CustomTabBarController.swift */; };
+		81C27C4E2243C760000111D6 /* DisasterPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C27C4D2243C760000111D6 /* DisasterPost.swift */; };
+		81C27C502243E447000111D6 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C27C4F2243E447000111D6 /* SettingsLauncher.swift */; };
+		81C27C5222440112000111D6 /* settingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C27C5122440112000111D6 /* settingsCell.swift */; };
+		81D1C1612242A1FA00FF42EB /* NotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D1C1602242A1FA00FF42EB /* NotController.swift */; };
+		81D1C1632242A37200FF42EB /* MsgController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D1C1622242A37200FF42EB /* MsgController.swift */; };
+		81D1C1652242A52100FF42EB /* NotificationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D1C1642242A52100FF42EB /* NotificationsCell.swift */; };
+		81D1C1672242B62F00FF42EB /* msgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D1C1662242B62F00FF42EB /* msgCell.swift */; };
+		81D1C1692243170100FF42EB /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D1C1682243170100FF42EB /* SearchController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8147BF7822412E56008E75B8 /* DonaNewsNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DonaNewsNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8147BF7B22412E56008E75B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8147BF7D22412E56008E75B8 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		8147BF8322412E56008E75B8 /* DonaNewsNS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DonaNewsNS.xcdatamodel; sourceTree = "<group>"; };
+		8147BF8522412E5A008E75B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8147BF8822412E5A008E75B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8147BF8A22412E5A008E75B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8147BF9022416794008E75B8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8147BF93224169A3008E75B8 /* DisasterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisasterCell.swift; sourceTree = "<group>"; };
+		8147BF9722419F17008E75B8 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		81C27C4D2243C760000111D6 /* DisasterPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisasterPost.swift; sourceTree = "<group>"; };
+		81C27C4F2243E447000111D6 /* SettingsLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
+		81C27C5122440112000111D6 /* settingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsCell.swift; sourceTree = "<group>"; };
+		81D1C1602242A1FA00FF42EB /* NotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotController.swift; sourceTree = "<group>"; };
+		81D1C1622242A37200FF42EB /* MsgController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgController.swift; sourceTree = "<group>"; };
+		81D1C1642242A52100FF42EB /* NotificationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsCell.swift; sourceTree = "<group>"; };
+		81D1C1662242B62F00FF42EB /* msgCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msgCell.swift; sourceTree = "<group>"; };
+		81D1C1682243170100FF42EB /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8147BF7522412E56008E75B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8147BF6F22412E56008E75B8 = {
+			isa = PBXGroup;
+			children = (
+				8147BF7A22412E56008E75B8 /* DonaNewsNS */,
+				8147BF7922412E56008E75B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8147BF7922412E56008E75B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8147BF7822412E56008E75B8 /* DonaNewsNS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8147BF7A22412E56008E75B8 /* DonaNewsNS */ = {
+			isa = PBXGroup;
+			children = (
+				8147BF7B22412E56008E75B8 /* AppDelegate.swift */,
+				81C27C4C2243C73B000111D6 /* Model */,
+				8147BF9622416A1A008E75B8 /* View */,
+				8147BF9522416A01008E75B8 /* Controller */,
+				8147BF922241679A008E75B8 /* Helpers */,
+				8147BF8522412E5A008E75B8 /* Assets.xcassets */,
+				8147BF8722412E5A008E75B8 /* LaunchScreen.storyboard */,
+				8147BF8A22412E5A008E75B8 /* Info.plist */,
+				8147BF8222412E56008E75B8 /* DonaNewsNS.xcdatamodeld */,
+			);
+			path = DonaNewsNS;
+			sourceTree = "<group>";
+		};
+		8147BF922241679A008E75B8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8147BF9022416794008E75B8 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8147BF9522416A01008E75B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8147BF7D22412E56008E75B8 /* HomeController.swift */,
+				81D1C1682243170100FF42EB /* SearchController.swift */,
+				81D1C1622242A37200FF42EB /* MsgController.swift */,
+				81D1C1602242A1FA00FF42EB /* NotController.swift */,
+				8147BF9722419F17008E75B8 /* CustomTabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8147BF9622416A1A008E75B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8147BF93224169A3008E75B8 /* DisasterCell.swift */,
+				81D1C1642242A52100FF42EB /* NotificationsCell.swift */,
+				81C27C5122440112000111D6 /* settingsCell.swift */,
+				81D1C1662242B62F00FF42EB /* msgCell.swift */,
+				81C27C4F2243E447000111D6 /* SettingsLauncher.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		81C27C4C2243C73B000111D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				81C27C4D2243C760000111D6 /* DisasterPost.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8147BF7722412E56008E75B8 /* DonaNewsNS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8147BF8D22412E5A008E75B8 /* Build configuration list for PBXNativeTarget "DonaNewsNS" */;
+			buildPhases = (
+				8147BF7422412E56008E75B8 /* Sources */,
+				8147BF7522412E56008E75B8 /* Frameworks */,
+				8147BF7622412E56008E75B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DonaNewsNS;
+			productName = DonaNewsNS;
+			productReference = 8147BF7822412E56008E75B8 /* DonaNewsNS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8147BF7022412E56008E75B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Sahil Reddy";
+				TargetAttributes = {
+					8147BF7722412E56008E75B8 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 8147BF7322412E56008E75B8 /* Build configuration list for PBXProject "DonaNewsNS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8147BF6F22412E56008E75B8;
+			productRefGroup = 8147BF7922412E56008E75B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8147BF7722412E56008E75B8 /* DonaNewsNS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8147BF7622412E56008E75B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8147BF8922412E5A008E75B8 /* LaunchScreen.storyboard in Resources */,
+				8147BF8622412E5A008E75B8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8147BF7422412E56008E75B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8147BF8422412E56008E75B8 /* DonaNewsNS.xcdatamodeld in Sources */,
+				81D1C1632242A37200FF42EB /* MsgController.swift in Sources */,
+				81C27C5222440112000111D6 /* settingsCell.swift in Sources */,
+				8147BF7E22412E56008E75B8 /* HomeController.swift in Sources */,
+				81C27C502243E447000111D6 /* SettingsLauncher.swift in Sources */,
+				81D1C1672242B62F00FF42EB /* msgCell.swift in Sources */,
+				8147BF9822419F17008E75B8 /* CustomTabBarController.swift in Sources */,
+				8147BF7C22412E56008E75B8 /* AppDelegate.swift in Sources */,
+				81C27C4E2243C760000111D6 /* DisasterPost.swift in Sources */,
+				8147BF9122416794008E75B8 /* Extensions.swift in Sources */,
+				8147BF94224169A3008E75B8 /* DisasterCell.swift in Sources */,
+				81D1C1692243170100FF42EB /* SearchController.swift in Sources */,
+				81D1C1652242A52100FF42EB /* NotificationsCell.swift in Sources */,
+				81D1C1612242A1FA00FF42EB /* NotController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8147BF8722412E5A008E75B8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8147BF8822412E5A008E75B8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8147BF8B22412E5A008E75B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8147BF8C22412E5A008E75B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8147BF8E22412E5A008E75B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DonaNewsNS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sred.DonaNewsNS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8147BF8F22412E5A008E75B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DonaNewsNS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sred.DonaNewsNS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8147BF7322412E56008E75B8 /* Build configuration list for PBXProject "DonaNewsNS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8147BF8B22412E5A008E75B8 /* Debug */,
+				8147BF8C22412E5A008E75B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8147BF8D22412E5A008E75B8 /* Build configuration list for PBXNativeTarget "DonaNewsNS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8147BF8E22412E5A008E75B8 /* Debug */,
+				8147BF8F22412E5A008E75B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8147BF8222412E56008E75B8 /* DonaNewsNS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8147BF8322412E56008E75B8 /* DonaNewsNS.xcdatamodel */,
+			);
+			currentVersion = 8147BF8322412E56008E75B8 /* DonaNewsNS.xcdatamodel */;
+			path = DonaNewsNS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8147BF7022412E56008E75B8 /* Project object */;
+}
