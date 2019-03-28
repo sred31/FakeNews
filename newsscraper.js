@@ -8,12 +8,12 @@
 *       Need to actually store table of results to Firebase
 */
 var Crawler = require('crawler');
-var wordlist = ["WOMAN", "FOOT", "FACEBOOK", "DATA", "COLLEGE"];
+var wordlist = ["WOMAN", "FOOT", "MUELLER", "DATA", "COLLEGE"];
 //var wordlist = ["FIRE", "AVALANCHE", "STORM"];
 //FIXME: May want to use "theguardian.com/world/natural-disasters" instead for the guardian
 var sitelist = ["https://abcnews.go.com", "https://apnews.com/apf-topnews",
-     "https://theguardian.com/world"];
-//var website = 'http://abcnews.go.com/';
+     "https://theguardian.com/world", "https://cbsnews.com"];
+const URL = require('url');
 
 //Results is an Array of Objects containing Title/Link pairs for all 
 //  articles with keywords in their titles
@@ -51,6 +51,7 @@ var c = new Crawler({
             var hit_ctr = 0;
             var this_link = "";
             var listlength = wordlist.length;
+            var website = res.request.uri.href;
 
             //Print formatting
             console.log("===================================");
@@ -63,47 +64,56 @@ var c = new Crawler({
             //a lean implementation of core jQuery designed specifically for the server       
             //For loop iterates through each anchor tag
 
+            //CODE FOR CBSNews
+            if (website == "https://www.cbsnews.com/"){
+                $('body a').each(function(i, elm){
+                    //Storing each element's text into a string, and trimming whitespace
+                    var str = $($(this).find("h4")).text();
+                    str = str.trim();
+                    console.log(str);
+                    for (var i = 0; i < listlength; i++){
+                        //Converting to Upper Case to make strings case-independent
+                        if (str.toUpperCase().includes(wordlist[i])){
+                            hit_ctr += 1;
+                            //console.log("\nTitle: " + str);
+                            //Storing the <a href> component of that header into link
+                            this_link = $(this).attr("href");
+
+                            var hit = {title: str, link: this_link}
+                            Results.push(hit);
+                        }
+                    }   
+                });
+            }
+
 
             //CODE FOR THE GUARDIAN (And all Websites we're using, I guess?)
-            $('body a').each(function(i, elm){
-                //Storing each element's text into a string, and trimming whitespace
-                var str = $(this).text();
-                str = str.trim();
-                for (var i = 0; i < listlength; i++){
-                    //Converting to Upper Case to make strings case-independent
-                    if (str.toUpperCase().includes(wordlist[i])){
-                        hit_ctr += 1;
-                        //console.log("\nTitle: " + str);
-                        //Storing the <a href> component of that into this_link
-                        this_link = $(this).attr("href");
-                        //console.log("Link: " + this_link);
+            else{
+                $('body a').each(function(i, elm){
+                    //Storing each element's text into a string, and trimming whitespace
+                    var str = $(this).text();
+                    str = str.trim();
+                    for (var i = 0; i < listlength; i++){
+                        //Converting to Upper Case to make strings case-independent
+                        if (str.toUpperCase().includes(wordlist[i])){
+                            hit_ctr += 1;
+                            //console.log("\nTitle: " + str);
+                            //Storing the <a href> component of that into this_link
+                            this_link = $(this).attr("href");
 
-                        //Pushing title and link of hit to Result array
-                        var hit = {title: str, link: this_link}
-                        Results.push(hit)
-                    }
-                }
-            });
-            
+                            //AP News only gives partial link, so need to resolve URL
+                            if (website == "https://apnews.com/apf-topnews"){
+                                this_link = URL.resolve(website, this_link);
+                            }
 
-            //CODE FOR ABCNEWS... not sure this is necessary?
-            /*
-            $('body h1').each(function(i, elm){
-                //Storing each element's text into a string, and trimming whitespace
-                var str = $(this).text();
-                str = str.trim();
-                for (var i = 0; i < listlength; i++){
-                    //Converting to Upper Case to make strings case-independent
-                    if (str.toUpperCase().includes(wordlist[i])){
-                        hit_ctr += 1;
-                        console.log("\nTitle: " + str);
-                        //Storing the <a href> component of that header into link
-                        link = $($(this).find("a")).attr("href");
-                        console.log("Link: " + link);
+                            //Pushing title and link of hit to Result array
+                            var hit = {title: str, link: this_link}
+                            Results.push(hit);
+                        }
                     }
-                }
-            });
-            */
+                });
+            }            
+
             console.log("===================================");
             console.log("|                                 |");
             console.log("|            Finished             |");
