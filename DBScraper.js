@@ -12,7 +12,6 @@
 
 /*const functions = require('firebase-functions');
 const admin = require('firebase-admin');
-
 admin.initializeApp({
   credential: admin.credential.applicationDefault()
 });*/
@@ -31,15 +30,10 @@ admin.initializeApp({
 const db = admin.firestore();
 
 
-
-
-
-
-
-
 var Crawler = require('crawler');
-var wordlist = ["WOMAN", "FOOT", "MUELLER", "DATA", "COLLEGE"];
-//var wordlist = ["FIRE", "AVALANCHE", "STORM"];
+var wordlist = ["FIRE", "AVALANCHE", "STORM", "TORNADO", "RAIN", "FLOOD", "CYCLONE",
+	"DROUGHT", "HURRICANE", "TSUNAMI", "VOLCANO", "VOLCANIC", "BLIZZARD"];
+
 //FIXME: May want to use "theguardian.com/world/natural-disasters" instead for the guardian
 var sitelist = ["https://abcnews.go.com", "https://apnews.com/apf-topnews",
      "https://theguardian.com/world", "https://cbsnews.com"];
