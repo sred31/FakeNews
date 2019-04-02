@@ -12,6 +12,7 @@
 
 /*const functions = require('firebase-functions');
 const admin = require('firebase-admin');
+
 admin.initializeApp({
   credential: admin.credential.applicationDefault()
 });*/
@@ -30,10 +31,16 @@ admin.initializeApp({
 const db = admin.firestore();
 
 
-var Crawler = require('crawler');
-var wordlist = ["FIRE", "AVALANCHE", "STORM", "TORNADO", "RAIN", "FLOOD", "CYCLONE",
-	"DROUGHT", "HURRICANE", "TSUNAMI", "VOLCANO", "VOLCANIC", "BLIZZARD"];
 
+
+
+
+
+
+var Crawler = require('crawler');
+var wordlist = ["WILDFIRE", "FOREST FIRE", "AVALANCHE", "STORM", "TORNADO", "RAIN", "FLOOD", "CYCLONE",
+	"DROUGHT", "HURRICANE", "TSUNAMI", "VOLCANO", "VOLCANIC", "BLIZZARD"];
+//var wordlist = ["FIRE", "AVALANCHE", "STORM"];
 //FIXME: May want to use "theguardian.com/world/natural-disasters" instead for the guardian
 var sitelist = ["https://abcnews.go.com", "https://apnews.com/apf-topnews",
      "https://theguardian.com/world", "https://cbsnews.com"];
@@ -78,7 +85,7 @@ var c = new Crawler({
             var website = res.request.uri.href;
             
             
-            var docRef = db.collection('site').doc('article')
+            //var docRef = db.collection('site').doc('article')
             
             
 
@@ -99,7 +106,7 @@ var c = new Crawler({
                     //Storing each element's text into a string, and trimming whitespace
                     var str = $($(this).find("h4")).text();
                     str = str.trim();
-                    console.log(str);
+                    //console.log(str);
                     for (var i = 0; i < listlength; i++){
                         //Converting to Upper Case to make strings case-independent
                         if (str.toUpperCase().includes(wordlist[i])){
@@ -110,14 +117,16 @@ var c = new Crawler({
 
                             var hit = {title: str, link: this_link}
                             Results.push(hit);
-                            
+                            var date = Date()
                             
                             
                             var data = {
                                 title: str,
                                 link: this_link,
+                                dateAdded: date
                             }
-                            var setDoc = db.collection('Article').doc(str).set(data)
+                            db.collection('Article').doc('Keyword').collection(wordlist[i]).doc(str).set(data)
+                            //var setDoc = db.collection(wordlist[i]).doc(str).set(data)
                             
                             
                             
@@ -149,12 +158,15 @@ var c = new Crawler({
                             //Pushing title and link of hit to Result array
                             var hit = {title: str, link: this_link}
                             Results.push(hit);
+                            var date = Date()
                             
                             var data = {
                                 title: str,
                                 link: this_link,
+                                dateAdded: date
                             }
-                            var setDoc = db.collection('Article').doc(str).set(data)
+                            var setDoc = db.collection('Article').doc('Keyword').collection(wordlist[i]).doc(str).set(data)
+                            //var setDoc = db.collection(wordlist[i]).doc(str).set(data)
                         }
                     }
                 });
